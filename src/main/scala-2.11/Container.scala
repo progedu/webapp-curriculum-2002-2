@@ -1,4 +1,4 @@
 class Container[+T](n: T) {
-  def put[T](a: T): Container[T] = new Container(a)
+  def put[E >: T](a: E): Container[E] = new Container[E](a)
   def get(): T = n
 }

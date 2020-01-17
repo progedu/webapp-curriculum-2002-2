@@ -1,4 +1,7 @@
-class Container(n: Int) {
-    def put(a: Int): Container = new Container(a)
-      def get(): Int = n
+class Container[+A](n: A) {
+
+  def put[A <: Any](a: A): Container[A] = new Container(a)
+
+  def get(): A = n
+
 }
